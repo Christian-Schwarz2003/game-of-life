@@ -3,35 +3,23 @@ import React, { useState, useEffect, useRef } from "react";
 
 export default function TimeControls({ step }) {
 	const [play, setPlay] = useState(false);
-	const [id,setId]=useState();
-	var refreshIntervalId;
+	const [intervalId, setIntervalId] = useState();
 	const delay = 500;
+
 	const playHandler = () => {
-		setId(setInterval(step,500))
+		setIntervalId(setInterval(step, delay));
 		setPlay(true);
 	};
-	const pauseHandler=()=> {
-		clearInterval(id);
+	const pauseHandler = () => {
+		clearInterval(intervalId);
 		setPlay(false);
-	}
-	
-	
-	
-	
-	
-	
-
-	
+	};
 
 	const stepHandler = () => {
 		if (!play) {
 			step();
 		}
 	};
-
-	
-	
-	
 
 	return (
 		<div>
