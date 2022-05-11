@@ -38,3 +38,15 @@
 .step.disabled{
     background-position: 25px 15px;
 }
+
+.cell{
+    height: 25px;
+	width: 25px;
+    border-radius: 0px;
+    background-color: #ffffff;
+    border-color: #696969;
+}
+
+.cell.alive{
+    background-color: black;
+}
